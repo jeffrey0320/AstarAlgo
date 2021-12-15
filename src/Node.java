@@ -14,12 +14,8 @@ public class Node implements Comparable<Node>{
         this.h = h;
     }
 
-    public double getCost(){
-        return cost = g + h;
-    }
-
     @Override
     public int compareTo(Node o) {
-        return(int)((this.g + this.h) - (((Node) o).g - ((Node) o).h));
+        return(int)((this.g + this.h) - (o.g - o.h));
     }
 }
